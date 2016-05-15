@@ -8,7 +8,6 @@ public class SensorListener implements TouchListener {
         robot = new LegoRobot();
         sensor = new TouchSensor(SensorPort.S1);
         sensor.addTouchListener(this);
-
         robot.addPart(sensor);
         robot.drawString("Press Sensor!", 0, 0);
 
