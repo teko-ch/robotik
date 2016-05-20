@@ -11,19 +11,12 @@ public class TouchEvent implements TouchListener {
         robot.addPart(sensor);
         robot.drawString("Press Touch!", 0, 0);
 
-    }
-
-    private void run(){
-        while (!Tools.isEscapePressed()){
-
-        }
+        Tools.waitEscape();
         robot.exit();
     }
 
-
     public static void main(String[] args) {
         TouchEvent exp = new TouchEvent();
-        exp.run();
     }
 
     @Override
