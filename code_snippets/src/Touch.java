@@ -1,10 +1,10 @@
 import ch.aplu.ev3.*;
 
-public class Sensor {
+public class Touch {
     private LegoRobot robot;
     private TouchSensor sensor;
 
-    public Sensor(){
+    public Touch(){
         robot = new LegoRobot();
         sensor = new TouchSensor(SensorPort.S1);
         robot.addPart(sensor);
@@ -22,7 +22,7 @@ public class Sensor {
     }
 
     public static void main(String[] args) {
-        Sensor exp = new Sensor();
+        Touch exp = new Touch();
         exp.run();
     }
 }

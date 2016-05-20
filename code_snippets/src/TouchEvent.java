@@ -1,15 +1,15 @@
 import ch.aplu.ev3.*;
 
-public class SensorListener implements TouchListener {
+public class TouchEvent implements TouchListener {
     private LegoRobot robot;
     private TouchSensor sensor;
 
-    public SensorListener(){
+    public TouchEvent(){
         robot = new LegoRobot();
         sensor = new TouchSensor(SensorPort.S1);
         sensor.addTouchListener(this);
         robot.addPart(sensor);
-        robot.drawString("Press Sensor!", 0, 0);
+        robot.drawString("Press Touch!", 0, 0);
 
     }
 
@@ -22,7 +22,7 @@ public class SensorListener implements TouchListener {
 
 
     public static void main(String[] args) {
-        SensorListener exp = new SensorListener();
+        TouchEvent exp = new TouchEvent();
         exp.run();
     }
 
