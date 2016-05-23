@@ -1,4 +1,7 @@
+package ch.teko.robotik.sensor;
+
 import ch.aplu.ev3.*;
+
 
 public class Touch {
     private LegoRobot robot;
