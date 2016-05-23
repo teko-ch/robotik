@@ -9,7 +9,7 @@ public class Ultra {
 
     public Ultra() {
         robot = new LegoRobot();
-        sensor = new UltrasonicSensor();
+        sensor = new UltrasonicSensor(SensorPort.S1);
         robot.addPart(sensor);
     }
 

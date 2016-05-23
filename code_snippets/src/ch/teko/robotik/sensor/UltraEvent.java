@@ -10,12 +10,16 @@ public class UltraEvent implements UltrasonicListener {
 
     public UltraEvent() {
         robot = new LegoRobot();
-        sensor = new UltrasonicSensor();
+        sensor = new UltrasonicSensor(SensorPort.S1);
         sensor.addUltrasonicListener(this, trigger);
         robot.addPart(sensor);
 
         Tools.waitEscape();
         robot.exit();
+    }
+
+    public static void main(String[] args) {
+        UltraEvent exp = new UltraEvent();
     }
 
     @Override

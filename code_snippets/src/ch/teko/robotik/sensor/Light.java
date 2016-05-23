@@ -9,7 +9,7 @@ public class Light {
 
     public Light() {
         robot = new LegoRobot();
-        sensor = new LightSensor();
+        sensor = new LightSensor(SensorPort.S1);
         robot.addPart(sensor);
     }
 
